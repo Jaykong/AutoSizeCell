@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eVh-9Y-5Pr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="IQH-9Z-B0K">
+            <objects>
+                <tableViewController id="uS9-9w-Ja8" customClass="TableViewController" customModule="JKAutoCell" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CZf-yK-23q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="zjG-x9-UWe" customClass="TableViewCell" customModule="JKAutoCell" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zjG-x9-UWe" id="vXd-eG-xPP">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPq-HL-EVa">
+                                            <rect key="frame" x="8" y="8" width="584" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="WPq-HL-EVa" secondAttribute="trailing" id="88j-Hx-U8P"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="WPq-HL-EVa" secondAttribute="bottom" id="Fbx-j8-P5Q"/>
+                                        <constraint firstItem="WPq-HL-EVa" firstAttribute="leading" secondItem="vXd-eG-xPP" secondAttribute="leadingMargin" id="s7D-Zf-gDa"/>
+                                        <constraint firstItem="WPq-HL-EVa" firstAttribute="top" secondItem="vXd-eG-xPP" secondAttribute="topMargin" id="zpi-rG-oYK"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLbl" destination="WPq-HL-EVa" id="WKP-fc-5NR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uS9-9w-Ja8" id="c69-5D-yhA"/>
+                            <outlet property="delegate" destination="uS9-9w-Ja8" id="McK-mC-aLa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="BcG-gn-maU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EhT-B5-RSd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1373" y="279"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aCi-gi-7Sh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eVh-9Y-5Pr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e48-3b-XaY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uS9-9w-Ja8" kind="relationship" relationship="rootViewController" id="iYR-on-bIL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ass-iu-Iqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="561" y="279"/>
+        </scene>
+    </scenes>
+</document>
